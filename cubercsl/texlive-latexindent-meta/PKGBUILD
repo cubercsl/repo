@@ -2,7 +2,7 @@
 
 pkgname=texlive-latexindent-meta
 pkgver=1
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta package to use latexindent'
 arch=(any)
 license=()
