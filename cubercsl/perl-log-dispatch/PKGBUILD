@@ -3,7 +3,7 @@
 # Generator  : CPANPLUS::Dist::Arch 1.32
 
 pkgname=perl-log-dispatch
-pkgver=2.6.5
+pkgver=2.70
 pkgrel=1
 pkgdesc="Dispatches messages to one or more outputs"
 arch=('any')
