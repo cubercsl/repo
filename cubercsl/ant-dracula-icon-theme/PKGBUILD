@@ -1,7 +1,7 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 pkgname=ant-dracula-icon-theme
 pkgver=1
-pkgrel=1
+pkgrel=2
 pkgdesc="Dracula theme icon"
 arch=("any")
 url="https://draculatheme.com/gtk/"
