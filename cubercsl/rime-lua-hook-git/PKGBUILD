@@ -2,7 +2,7 @@
 
 pkgname=rime-lua-hook-git
 pkgver=r2.4d04015
-pkgrel=2
+pkgrel=3
 pkgdesc="Pacman hook to merge rime lua plugin"
 arch=('any')
 url="https://github.com/ayalhw/rime-lua-hook"
