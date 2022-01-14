@@ -1,0 +1,13 @@
+maintainers:
+  - github: cubercsl
+
+build_prefix: extra-x86_64
+
+repo_depends:
+  - nodejs-commitizen
+
+update_on:
+  - source: github
+    github: commitizen/cz-conventional-changelog
+    use_latest_release: true
+# vim:set ts=4 sw=2 et:
