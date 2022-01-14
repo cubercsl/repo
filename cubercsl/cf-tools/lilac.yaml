@@ -1,0 +1,10 @@
+maintainers:
+  - github: cubercsl
+
+build_prefix: extra-x86_64
+
+update_on:
+  - source: github
+    github: xalanq/cf-tool
+    use_latest_release: true
+# vim:set ts=4 sw=2 et:

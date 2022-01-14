@@ -1,0 +1,11 @@
+pkgname=canokey-udev-rules
+pkgver=0.0
+pkgrel=1
+pkgdesc="udev rules for canokey"
+arch=('any')
+license=('unknown')
+source=("69-canokeys.rules")
+sha256sums=('90cf155e351569b5042ace9438ef7badbfe14138666dd057d9a6c0bf81fb764b')
+package() {
+    install -Dm644 "69-canokeys.rules" -t $pkgdir/usr/lib/udev/rules.d/
+}
