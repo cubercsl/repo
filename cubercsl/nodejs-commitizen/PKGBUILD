@@ -2,7 +2,7 @@
 _npmname=commitizen
 pkgname=nodejs-commitizen
 pkgver=4.2.4
-pkgrel=2
+pkgrel=3
 pkgdesc="Git plugin to help you write consistent commit messages"
 arch=(any)
 url="https://github.com/commitizen/cz-cli"
