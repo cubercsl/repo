@@ -3,7 +3,7 @@
 _npmname=cz-conventional-changelog
 pkgname=nodejs-cz-conventional-changelog
 pkgver=3.3.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Commitizen plugin for conventional changelogs commit messages"
 arch=(any)
 url="https://github.com/commitizen/cz-conventional-changelog"
