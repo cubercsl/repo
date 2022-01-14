@@ -1,6 +1,6 @@
 pkgname=canokey-udev-rules
 pkgver=1
-pkgrel=1
+pkgrel=2
 pkgdesc="udev rules for canokey"
 arch=('any')
 license=('unknown')
