@@ -3,7 +3,7 @@
 
 pkgname=polychromatic
 pkgver=0.7.3
-pkgrel=1
+pkgrel=2
 pkgdesc='RGB lighting management front-end application for OpenRazer'
 arch=('any')
 url='https://github.com/polychromatic/polychromatic'
