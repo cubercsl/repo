@@ -1,0 +1,14 @@
+maintainers:
+  - github: cubercsl
+
+build_prefix: extra-x86_64
+
+repo_depend:
+  - 
+
+update_on:
+  - source: github
+    github: polychromatic/polychromatic
+    use_latest_release: true
+  - alias: python
+# vim:set ts=4 sw=2 et:
