@@ -1,0 +1,8 @@
+maintainers:
+  - github: cubercsl
+
+update_on:
+  - source: github
+    github: mzz2017/gg
+    use_latest_release: true
+# vim:set ts=4 sw=2 et:
