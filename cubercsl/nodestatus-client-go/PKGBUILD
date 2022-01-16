@@ -1,4 +1,5 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
+# Contributor: cokemine <aptx4561 at gmail dot com>
 
 pkgname=nodestatus-client-go
 _pkgname=${pkgname/-go}
