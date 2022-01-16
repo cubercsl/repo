@@ -2,7 +2,7 @@
 
 pkgname=nodestatus-client-go
 _pkgname=${pkgname/-go}
-pkgver=1.0.0
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="The client of NodeStatus / Go Version"
 provides=('nodestatus-client')
@@ -16,7 +16,7 @@ makedepends=('go')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/cokemine/nodestatus-client-go/archive/v$pkgver.tar.gz"
         "$_pkgname.service"
         "config.conf.example")
-sha512sums=('9863517ea28a72f2f229197f4ecd904fa99e2fc2f2d7928d3591d29221b622e9ffcaba7161844564485a83137f5695b05106b2a325c3444f3a0c7c3ced6af637'
+sha512sums=('aec6c6941c3720ffcf19d76c5e1e29fd0ea9d1b7391771f9e79c3c29847ca1c8af0a88c05ff74598c368cc0af8b83ee2f838589f78472c33630c12e5698a0742'
             '81c4e9344cc0f2205dd527924e93344118cc8d9a459500c9aba41896e2e577e781ebfb0e1b08039c084c8a5567b1f0cdfbb5eadb19ecf101b4e006e07b1437d1'
             '47010630fbe51a077b8a915a1dc84b0b04a7aefd19153a2bc1076f0a631ef15f34593255b320b0dea5f868f851a042c0b0830595a0803bf7156ea82ba9b9d208')
 
