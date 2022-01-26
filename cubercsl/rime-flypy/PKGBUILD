@@ -2,7 +2,7 @@
 
 pkgname=rime-flypy
 pkgver=10.8.6
-pkgrel=1
+pkgrel=2
 pkgdesc="小鹤音形 rime 挂接文件"
 arch=('any')
 url="http://flypy.com/"
