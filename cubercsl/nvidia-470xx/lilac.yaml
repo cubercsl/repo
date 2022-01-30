@@ -13,6 +13,7 @@ post_build: git_pkgbuild_commit
 update_on:
   - source: aur
     aur: nvidia-470xx-utils
+    strip_release: true
   - source: alpm
     alpm: linux
     repo: core
