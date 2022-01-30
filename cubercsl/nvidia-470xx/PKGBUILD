@@ -16,7 +16,7 @@ build() {
 }
 
 package() {
-    depends=('linux' "nvidia-utils=${pkgver}" 'libglvnd')
+    depends=('linux' "nvidia-470xx-utils=${pkgver}" 'libglvnd')
 
     _kernver="$(</usr/src/linux/version)"
 
