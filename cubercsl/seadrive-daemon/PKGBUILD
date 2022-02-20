@@ -1,0 +1,28 @@
+# Maintainer: c0gnitivefl0w
+# Co-Maintainer: eldios
+
+pkgname=seadrive-daemon
+pkgver=2.0.16
+pkgrel=2
+pkgdesc="Daemon part of seadrive"
+arch=('x86_64')
+url="https://github.com/haiwen/seadrive-fuse"
+license=('GPL3')
+depends=('libsearpc' 'libcurl-compat' 'libevent'
+         'openssl-1.0' 'fuse2')
+makedepends=('python')
+source=("https://github.com/haiwen/seadrive-fuse/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('36d32896cb8f347692fe8357014d709cee9b6a2d15f6bb4670343cd69df22b4c')
+
+build() {
+  cd "seadrive-fuse-${pkgver}"
+  ./autogen.sh
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  install -Dm 755 \
+    "${srcdir}/seadrive-fuse-${pkgver}/src/seadrive" \
+    "${pkgdir}/usr/bin/seadrive"
+}
