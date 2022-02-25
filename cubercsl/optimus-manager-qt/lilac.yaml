@@ -8,4 +8,4 @@ update_on:
     github: Shatur/optimus-manager-qt
     use_latest_release: true
   - source: manual
-    manual: 1
+    manual: 1.1
