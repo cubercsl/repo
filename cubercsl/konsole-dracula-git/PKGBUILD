@@ -1,7 +1,7 @@
 # Maintainer: zenekron <zenekron@gmail.com>
 pkgname=konsole-dracula-git
-pkgver=r16.fa85573
-pkgrel=2
+pkgver=r17.030486c
+pkgrel=1
 pkgdesc="Dracula theme for konsole"
 arch=("any")
 url="https://draculatheme.com/konsole/"
