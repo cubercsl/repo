@@ -5,4 +5,6 @@ update_on:
   - source: github
     github: Project-LemonLime/Project_LemonLime
     use_latest_release: true
+  - source: manual
+    manual: 1
 # vim:set ts=4 sw=2 et:
