@@ -1,4 +1,19 @@
 maintainers:
   - github: cubercsl
 
-managed: false
+repo_depends:
+  - seadrive-daemon
+
+build_prefix: archlinuxcn-x86_64
+
+pre_build_script: update_pkgver_and_pkgrel(_G.newver.lstrip('v'))
+
+post_build: git_pkgbuild_commit
+
+update_on:
+  - source: github
+    github: haiwen/seadrive-gui
+    use_latest_tag: true
+  - source: alpm
+    alpm: seadrive-daemon
+    repo: archlinuxcn
