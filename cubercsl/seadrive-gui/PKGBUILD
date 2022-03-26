@@ -1,7 +1,7 @@
 # Maintainer: cubercsl
 
 pkgname=seadrive-gui
-pkgver=2.0.20
+pkgver=2.0.21
 pkgrel=1
 pkgdesc="GUI part of seadrive"
 arch=('i686' 'x86_64' 'armv7h' 'armv6h' 'aarch64')
@@ -11,7 +11,7 @@ depends=('qt6-webengine' 'qt6-tools' 'qt6-5compat'
          'seadrive-daemon')
 makedepends=("cmake")
 source=("${pkgname}-v${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz")
-sha256sums=('b517be8f355f06c36d122388d84dd822d8b8b1d97dd60992c52c273d3dfc6232')
+sha256sums=('4134f3b42288b5d6e3d9538ca33cb36db6a32272ab1e47ad062292b68b1d8a0c')
 
 prepare() {
   mkdir "${srcdir}/bin"
