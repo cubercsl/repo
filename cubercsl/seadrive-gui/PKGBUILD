@@ -1,22 +1,27 @@
-# Maintainer: c0gnitivefl0w
+# Maintainer: cubercsl
 
 pkgname=seadrive-gui
-pkgver=2.0.19
+pkgver=2.0.20
 pkgrel=1
 pkgdesc="GUI part of seadrive"
 arch=('i686' 'x86_64' 'armv7h' 'armv6h' 'aarch64')
 url="https://github.com/haiwen/${pkgname}"
 license=('Apache')
-depends=('qt5-webengine' 'qt5-tools'
+depends=('qt6-webengine' 'qt6-tools' 'qt6-5compat' 
          'seadrive-daemon')
 makedepends=("cmake")
 source=("${pkgname}-v${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz")
-sha256sums=('172a6946a46d03a5f07c65d8c3232fdf89b34fe5867b80c59c96c795ec77d376')
+sha256sums=('b517be8f355f06c36d122388d84dd822d8b8b1d97dd60992c52c273d3dfc6232')
 
+prepare() {
+  mkdir "${srcdir}/bin"
+  ln -sf $(pacman -Ql qt6-base | grep /usr/bin/qmake | awk '{print $2}') ${srcdir}/bin/qmake
+}
 
 build () {
   cd "${srcdir}"
   mkdir -p build && cd build
+  export PATH="${srcdir}/bin":$PATH
   cmake \
     -DBUILD_SPARKLE_SUPPORT=OFF \
     -DCMAKE_BUILD_TYPE=Release \
