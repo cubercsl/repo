@@ -3,7 +3,7 @@
 
 pkgname=seadrive-daemon
 pkgver=2.0.16
-pkgrel=2
+pkgrel=3
 pkgdesc="Daemon part of seadrive"
 arch=('x86_64')
 url="https://github.com/haiwen/seadrive-fuse"
