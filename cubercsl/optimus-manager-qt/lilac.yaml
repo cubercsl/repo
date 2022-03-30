@@ -1,7 +1,7 @@
 maintainers:
   - github: cubercsl
 
-build_prefix: archlinuxcn-x86_64
+build_prefix: cubercsl-x86_64
 
 update_on:
   - source: github
