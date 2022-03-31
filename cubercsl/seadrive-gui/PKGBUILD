@@ -15,7 +15,7 @@ sha256sums=('4134f3b42288b5d6e3d9538ca33cb36db6a32272ab1e47ad062292b68b1d8a0c')
 
 prepare() {
   mkdir "${srcdir}/bin"
-  ln -sf $(pacman -Ql qt6-base | grep /usr/bin/qmake | awk '{print $2}') ${srcdir}/bin/qmake
+  ln -sf $(pacman -Qql qt6-base | grep /usr/bin/qmake) ${srcdir}/bin/qmake
 }
 
 build () {
