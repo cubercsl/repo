@@ -19,7 +19,7 @@ TEMPLATE = '''
 maintainers:
   - github: cubercsl
 
-pre_build_script: aur_pre_build(maintainers=['{maintainers}'])
+pre_build_script: aur_pre_build(maintainers={maintainers})
 
 post_build: aur_post_build
 
@@ -41,9 +41,7 @@ def add_pkg(pkg_name, maintainers):
     write_file(Path(REPO, pkg_name, 'lilac.yaml'),
             TEMPLATE.format(
             pkg_name=pkg_name,
-            maintainers=', '.join(maintainers)
-        ))
-
+            maintainers=repr(maintainers)))
 
 
 if __name__ == '__main__':
