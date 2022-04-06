@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+
+"""
+Usage: add_aur_pkg aur_pkg...
+
+"""
+import argparse
+import os
+
+from pathlib import Path
+
+ROOT = Path(__file__).parent.parent
+REPO = Path(ROOT, 'cubercsl')
+
+def usage():
+    print(__doc__)
+
+TEMPLATE = '''
+maintainers:
+  - github: cubercsl
+
+pre_build_script: aur_pre_build(maintainers=['{maintainers}'])
+
+post_build: aur_post_build
+
+update_on:
+  - source: aur
+    aur: {pkg_name}
+
+# vim:set ts=4 sw=2 et:
+'''
+
+def write_file(path, content):
+    print(f'File: {path}\n{content}')
+    with open(path, 'w') as f:
+        f.write(content)
+
+def add_pkg(pkg_name, maintainers):
+    print(pkg_name, maintainers)
+    os.makedirs(Path(REPO, pkg_name), exist_ok=True)
+    write_file(Path(REPO, pkg_name, 'lilac.yaml'),
+            TEMPLATE.format(
+            pkg_name=pkg_name,
+            maintainers=', '.join(maintainers)
+        ))
+
+
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description="Add an AUR Pakage in repo")
+    parser.add_argument('pkg_name')
+    parser.add_argument('maintainers', nargs='+')
+    args = parser.parse_args()
+    add_pkg(args.pkg_name, args.maintainers)
