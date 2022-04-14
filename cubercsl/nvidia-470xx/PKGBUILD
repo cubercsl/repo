@@ -1,6 +1,6 @@
 pkgname=nvidia-470xx
 pkgver=470.103.01
-pkgrel=15
+pkgrel=16
 pkgdesc="NVIDIA drivers for linux"
 arch=('x86_64')
 url="https://www.nvidia.com/"
@@ -27,6 +27,7 @@ package() {
 
     install -Dm644 /usr/share/licenses/nvidia-470xx-dkms/LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
+
 
 
 
