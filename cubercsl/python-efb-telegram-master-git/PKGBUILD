@@ -3,7 +3,7 @@
 pkgname=python-efb-telegram-master-git
 _provide=${pkgname%-git}
 _name=${_provide#python-}
-pkgver=r432.9617272
+pkgver=r490.36a0421
 pkgrel=1
 pkgdesc='EFB Telegram Master, a channel for EH Forwarder Bot.'
 arch=('any')
