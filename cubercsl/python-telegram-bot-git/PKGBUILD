@@ -48,9 +48,9 @@ prepare() {
 
 pkgver() {
     cd $srcdir/$_provide
-    printf "%s.r%s.%s" "$(python -c 'import telegram; print(telegram.__version__)')" \
-        "$(git rev-list --count $(git log --oneline | grep Bump | head -n1 | awk '{print $1}')..HEAD)" "$(git rev-parse --short HEAD)"
-    # printf "%s" "$(git describe --long --tags | sed 's/^v//;s/\([^-]*-\)g/r\1/;s/-/./g')"
+    # printf "%s.r%s.%s" "$(python -c 'import telegram; print(telegram.__version__)')" \
+        # "$(git rev-list --count $(git log --oneline | grep Bump | head -n1 | awk '{print $1}')..HEAD)" "$(git rev-parse --short HEAD)"
+    printf "%s" "$(git describe --long --tags | sed 's/^v//;s/\([^-]*-\)g/r\1/;s/-/./g')"
 }
 
 build() {

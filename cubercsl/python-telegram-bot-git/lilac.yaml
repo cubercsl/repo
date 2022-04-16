@@ -11,4 +11,4 @@ update_on:
     github: python-telegram-bot/python-telegram-bot
   - alias: python
   - source: manual
-    manual: 1
+    manual: 1.1
