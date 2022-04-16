@@ -5,9 +5,13 @@ build_prefix: extra-x86_64
 pre_build_script: update_pkgver_and_pkgrel(_G.newver.lstrip('v'))
 post_build: git_pkgbuild_commit
 
+makepkg_args:  ['--nocheck']
+
 update_on:
   - source: github
     github: kkroening/ffmpeg-python
     use_max_tag: true
   - alias: python
+  - source: manual
+    manual: 1
 # vim:set ts=4 sw=2 et:
