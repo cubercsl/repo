@@ -11,6 +11,6 @@ update_on:
     github: ehForwarderBot/efb-wechat-slave
   - alias: python
   - source: manual
-    manual: 1
+    manual: 1.1
 
 # vim:set ts=4 sw=2 et:
