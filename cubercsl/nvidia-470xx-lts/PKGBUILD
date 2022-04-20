@@ -10,7 +10,7 @@ license=('custom')
 options=('!strip')
 
 build() {
-    _kernver=$(</usr/src/linux/version)
+    _kernver=$(</usr/src/linux-lts/version)
 
     fakeroot dkms build --dkmstree "${srcdir}" -m nvidia/${pkgver} -k ${_kernver}
 }
@@ -18,7 +18,7 @@ build() {
 package() {
     depends=('linux-lts' "nvidia-470xx-utils=${pkgver}" 'libglvnd')
 
-    _kernver="$(</usr/src/linux/version)"
+    _kernver="$(</usr/src/linux-lts/version)"
 
     install -Dt "${pkgdir}/usr/lib/modules/${_kernver}/extramodules" -m644 nvidia/${pkgver}/${_kernver}/${CARCH}/module/*
 
