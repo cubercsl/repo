@@ -1,10 +1,10 @@
-pkgname=nvidia-470xx
+pkgname=nvidia-470xx-lts
 pkgver=470.103.01
-pkgrel=16
+pkgrel=1
 pkgdesc="NVIDIA drivers for linux"
 arch=('x86_64')
 url="https://www.nvidia.com/"
-makedepends=('linux-headers' "nvidia-470xx-dkms=$pkgver")
+makedepends=('linux-lts-headers' "nvidia-470xx-dkms=$pkgver")
 provides=('NVIDIA-MODULE')
 license=('custom')
 options=('!strip')
@@ -16,7 +16,7 @@ build() {
 }
 
 package() {
-    depends=('linux' "nvidia-470xx-utils=${pkgver}" 'libglvnd')
+    depends=('linux-lts' "nvidia-470xx-utils=${pkgver}" 'libglvnd')
 
     _kernver="$(</usr/src/linux/version)"
 
