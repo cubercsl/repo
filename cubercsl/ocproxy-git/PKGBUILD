@@ -1,8 +1,8 @@
 # Maintainer: Simon Legner <Simon.Legner@gmail.com>
 pkgname=ocproxy-git
 _pkgname=ocproxy
-pkgver=1.60.r8.g8f15425
-pkgrel=3
+pkgver=1.60.r9.gc98f06d
+pkgrel=1
 pkgdesc="A user-level SOCKS and port forwarding proxy for OpenConnect based on lwIP"
 depends=('libevent')
 makedepends=('git')
