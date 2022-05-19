@@ -3,7 +3,7 @@
 
 pkgname=('python-telegram-bot-git')
 epoch=1
-pkgver=20.0a0.r18.ca4e4c62
+pkgver=20.0a0.r19.2175af6a
 pkgrel=1
 pkgdesc="A Python wrapper around the Telegram Bot API"
 arch=('any')
