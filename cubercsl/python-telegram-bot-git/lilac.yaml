@@ -9,6 +9,7 @@ post_build: git_pkgbuild_commit
 update_on:
   - source: github
     github: python-telegram-bot/python-telegram-bot
+    branch: v13.x
   - alias: python
   - source: manual
     manual: 1.1
