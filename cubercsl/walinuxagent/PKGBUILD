@@ -5,7 +5,7 @@
 pkgname=walinuxagent
 _pkgname=WALinuxAgent
 pkgver=2.7.0.6
-pkgrel=1
+pkgrel=2
 pkgdesc="Microsoft Azure Linux Agent"
 arch=('any')
 url="https://github.com/Azure/WALinuxAgent"
