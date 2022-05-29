@@ -8,5 +8,4 @@ update_on:
   - source: github
     github: caddy-dns/cloudflare
 
-managed: false
 # vim:set ts=4 sw=2 et:
