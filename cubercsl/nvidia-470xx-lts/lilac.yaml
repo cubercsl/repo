@@ -5,6 +5,11 @@ build_prefix: cubercsl-x86_64
 
 makepkg_args:  ['--rmdeps']
 
+repo_depends:
+  # must rebuild nvidia-470xx-dkms first
+  - nvidia-470xx-utils: nvidia-470xx-utils
+  - nvidia-470xx-utils: nvidia-470xx-dkms
+
 pre_build_script: update_pkgver_and_pkgrel(_G.newver.lstrip('v'))
 
 post_build: git_pkgbuild_commit
