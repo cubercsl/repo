@@ -12,7 +12,7 @@ license=('AGPL3')
 groups=('efb')
 depends=(
 	'python-ehforwarderbot'
-	'python-telegram-bot-git'
+	'python-telegram-bot'
 	'python-magic-ahupp'
 	'python-ffmpeg'
 	'python-peewee'
