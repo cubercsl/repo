@@ -36,6 +36,10 @@ prepare() {
   # sed -i 's/from telegram.vendor.ptb_urllib3.urllib3/from urllib3/' tests/test_bot.py
   sed -e '/telegram.utils.deprecate.TelegramDeprecationWarning/i \    ignore:python-telegram-bot is using upstream urllib3. This is allowed but not supported by python-telegram-bot maintainers.:UserWarning' \
     -i setup.cfg
+    msg2 "Unpinning python-apscheduler..."
+    sed -i 's/APScheduler==.*$/APScheduler/' requirements.txt
+    msg2 "Unpinning python-cachetools..."  # just in case
+    sed -i 's/cachetools==.*$/cachetools/' requirements.txt
 }
 
 build() {
