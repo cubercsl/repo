@@ -2,7 +2,7 @@
 
 pkgname=ant-dracula-theme-git
 _pkgname=Ant-Dracula
-pkgver=3.0.r47.e6a6500
+pkgver=3.0.r48.08fc8a0
 pkgrel=1
 pkgdesc="Dracula variant of the Ant theme"
 arch=("any")
