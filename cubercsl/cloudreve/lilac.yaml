@@ -9,4 +9,5 @@ post_build: git_pkgbuild_commit
 update_on:
   - source: github
     github: cloudreve/cloudreve
+    use_latest_release: true
 # vim:set ts=4 sw=2 et:
