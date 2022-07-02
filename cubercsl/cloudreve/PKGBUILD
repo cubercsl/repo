@@ -1,6 +1,6 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 pkgname=cloudreve
-pkgver=20220614.064202
+pkgver=3.5.3
 pkgrel=1
 pkgdesc='Self-hosted file management and sharing system, supports multiple storage providers'
 arch=('x86_64')
