@@ -2,7 +2,7 @@
 pkgname=cloudreve-frontend-git
 _pkgname=cloudreve
 pkgver=r485.8286e67
-pkgrel=1
+pkgrel=2
 pkgdesc='Cloudreve V3 的前端'
 arch=('any')
 url='https://github.com/cloudreve/frontend'
