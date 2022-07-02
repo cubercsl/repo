@@ -1,0 +1,61 @@
+# Maintainer: cubercsl <2014cais01 at gmail dot com>
+pkgname=cloudreve
+pkgver=3.5.3
+pkgrel=1
+pkgdesc='Self-hosted file management and sharing system, supports multiple storage providers'
+arch=('x86_64')
+url='https://github.com/cloudreve/Cloudreve'
+license=('GPL')
+depends=('glibc')
+makedepends=('go' 'git')
+optdepends=('aria2: offline download support')
+source=(
+  "$pkgname::git+https://github.com/cloudreve/Cloudreve"
+  'systemd.service'
+  'sysusers.conf'
+  'tmpfiles.conf'
+)
+sha256sums=('SKIP'
+            'c2e11a1f08300b7ba1b1284865aec80e7fffc184744bd8be0aad4a46525c41c7'
+            '95a772e2f9529ed8693f7362e9ee5a549230162a10f73308ee8b8622b1864c91'
+            '15ecca797fdf095d5abb31809436ee5de84102ef4fb2d88833aa3d10a4c0a6ee')
+options=(emptydirs)
+
+build() {
+  cd "$pkgname"
+  
+  mkdir -p build # create build dir
+
+  export CGO_CPPFLAGS="${CPPFLAGS}"
+  export CGO_CFLAGS="${CFLAGS}"
+  export CGO_CXXFLAGS="${CXXFLAGS}"
+  export CGO_LDFLAGS="${LDFLAGS}"
+  
+  local _commit="$(git rev-parse --short HEAD)"
+
+  go build -o build/${pkgname} \
+    -trimpath \
+    -buildmode=pie \
+    -mod=readonly \
+    -modcacherw \
+    -ldflags "-linkmode external -extldflags '${LDFLAGS}' -X 'github.com/cloudreve/Cloudreve/v3/pkg/conf.BackendVersion=$pkgver' -X 'github.com/cloudreve/Cloudreve/v3/pkg/conf.LastCommit=$_commit'"
+
+}
+
+package() {
+  install=$pkgname.install
+  depends+=("${pkgname}-frontend")
+
+  # systemd integration
+  install -vDm644 systemd.service "$pkgdir/usr/lib/systemd/system/$pkgname.service"
+  install -vDm644 sysusers.conf "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
+  install -vDm644 tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
+  
+  cd "$pkgname"
+ 
+  install -vdm750 "$pkgdir/var/lib/$pkgname"
+  install -vDm755 build/$pkgname "$pkgdir/var/lib/$pkgname/$pkgname"
+  install -vdm755 $pkgdir/usr/bin
+  ln -vsf "/var/lib/$pkgname/$pkgname" "$pkgdir/usr/bin/$pkgname"
+  ln -vsf "/usr/share/$pkgname/" "$pkgdir/var/lib/$pkgname/statics"
+}

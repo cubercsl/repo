@@ -1,0 +1,5 @@
+yarn run v1.22.19
+$ node scripts/build.js
+Creating an optimized production build...
+
+[1m[31m==> ERROR:(B[m[1m Aborted by user! Exiting...(B[m
