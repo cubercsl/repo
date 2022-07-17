@@ -54,7 +54,7 @@ index 8b195dd7..8c36253b 100644
    sed 's|"unknown"|"v'"${pkgver}"'"|g' -i caddy.go
 +  # add custom plugins
 +  patch -Np1 < "${srcdir}/plugin-cloudflare.patch"
-+  go mod tidy
++  go mod tidy -e
  }
  
  build() {
