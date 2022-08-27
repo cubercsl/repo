@@ -17,5 +17,5 @@ install="$pkgname.install"
 
 package() {
     cd "$srcdir/$pkgname-$pkgver"/
-    make PREFIX=/usr "DESTDIR=$pkgdir" 
+    make PREFIX=/usr "DESTDIR=$pkgdir" install
 }
