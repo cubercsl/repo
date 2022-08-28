@@ -10,7 +10,7 @@ cat <<'EOF'
       schema_list:
         - schema: flypy
   
-  To deploy data for fcitx5-rime, use the following commands:
+  Or use the following commands for fcitx5:
 
     rime_deployer --add-schema flypy
     rime_deployer --build ~/.local/share/fcitx5 /usr/share/rime-data
