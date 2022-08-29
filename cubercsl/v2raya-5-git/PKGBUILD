@@ -2,7 +2,7 @@
 
 pkgname=v2raya-5-git
 pkgver=20220829.r1200.9eace3e
-pkgrel=1
+pkgrel=2
 pkgdesc="v2rayA nightly version (for v2ray v5)"
 arch=('i686' 'x86_64' 'armv7h' 'armv6h' 'aarch64')
 url="https://github.com/v2rayA/v2rayA"
