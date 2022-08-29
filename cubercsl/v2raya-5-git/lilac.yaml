@@ -1,0 +1,13 @@
+maintainers:
+  - github: cubercsl
+
+build_prefix: extra-x86_64
+
+pre_build: vcs_update
+post_build: git_pkgbuild_commit
+
+update_on:
+  - source: github
+    github: v2raya/v2raya
+    branch: feat_v5
+# vim:set ts=4 sw=2 et:
