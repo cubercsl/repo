@@ -2,7 +2,7 @@
 pkgbase=ant-dracula-kde-theme-git
 pkgname=("ant-dracula-kde-theme-git" "ant-dracula-kvantum-theme-git")
 _pkgname=gtk
-pkgver=3.0.r69.fc6d74b
+pkgver=3.0.r70.3498cfd
 pkgrel=1
 pkgdesc="Ant Dracula theme for KDE Plasma"
 arch=("any")
