@@ -40,6 +40,8 @@ prepare() {
     sed -i 's/APScheduler==.*$/APScheduler/' requirements.txt
     msg2 "Unpinning python-cachetools..."  # just in case
     sed -i 's/cachetools==.*$/cachetools/' requirements.txt
+    msg2 "Unpinning python-tornado..."
+    sed -i 's/tornado==.*$/tornado/' requirements.txt
 }
 
 build() {
