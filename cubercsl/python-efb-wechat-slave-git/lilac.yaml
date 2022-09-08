@@ -9,7 +9,6 @@ repo_depends:
   - python-ehforwarderbot-git
   - python-itchat-git
   - python-bullet
-  - python-magic-ahupp
 
 update_on:
   - source: github

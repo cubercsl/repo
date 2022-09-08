@@ -4,7 +4,7 @@ pkgname=python-efb-telegram-master-git
 _provide=${pkgname%-git}
 _name=${_provide#python-}
 pkgver=2.3.0.r2.0850aeb
-pkgrel=3
+pkgrel=4
 pkgdesc='EFB Telegram Master, a channel for EH Forwarder Bot.'
 arch=('any')
 url='https://github.com/blueset/efb-telegram-master'
@@ -13,7 +13,7 @@ groups=('efb')
 depends=(
 	'python-ehforwarderbot'
 	'python-telegram-bot'
-	'python-magic-ahupp'
+	'python-magic'
 	'python-ffmpeg'
 	'python-peewee'
 	'python-requests'
