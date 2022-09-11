@@ -2,9 +2,14 @@
 maintainers:
   - github: cubercsl
 
+build_prefix: cubercsl-x86_64
+
 pre_build_script: aur_pre_build(maintainers=['jonathon'])
 
 post_build: aur_post_build
+
+repo_depends:
+  - nvidia-470xx-utils
 
 update_on:
   - source: aur
