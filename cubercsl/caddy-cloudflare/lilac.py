@@ -25,7 +25,7 @@ def post_build():
 
 PATCH=r'''
 diff --git a/trunk/PKGBUILD b/trunk/PKGBUILD
-index 8b195dd7..8c36253b 100644
+index 9268346..bfa37c9 100644
 --- a/trunk/PKGBUILD
 +++ b/trunk/PKGBUILD
 @@ -26,7 +26,8 @@ source=("git+https://github.com/caddyserver/caddy#tag=${_gitcommit}?signed"
@@ -42,8 +42,8 @@ index 8b195dd7..8c36253b 100644
              'c893d88fec89e37da6596030c8dce7103e7e575371e8542a24d2a0741e877358d85219f2d8ade9d6aa0f515efe1156a4badd9fef5f65f553a5b0c72330c4728f'
              '716da3f4edeb3561243aeaf5c32b01ff7a4ac810b6deba8364fb12a1f71b6a5278c34a97b289bcfdc48784679b942bf780f1f36d416a575791168c94b0d59fe0'
              '563d6b45e91fc584fb5a27caaa382f59c140cb0a1b28b8d8faced4f7c7cad86d8671eb6ac10056f41518a842c8f606130d7e0c71df2b731d5eb0b4c868ea5d41'
--            'b06369dd976cfcc9b519782c088efa5fba25db61663112fcc4e20b108d5165cbebcf63b6fe6d1e36119a55271374bac0037a4d07af412241d6a4d2b4f4efda0b')
-+            'b06369dd976cfcc9b519782c088efa5fba25db61663112fcc4e20b108d5165cbebcf63b6fe6d1e36119a55271374bac0037a4d07af412241d6a4d2b4f4efda0b'
+-            '0fedec714604566fb0da995cdfb2dd2cb8f3995bfa1d6c2e9a38ddd1da11634c3e37f2da381f715df4fc9ebd9653c3aa4806de47ae5094ea1fc19b7f5b795a30')
++            '0fedec714604566fb0da995cdfb2dd2cb8f3995bfa1d6c2e9a38ddd1da11634c3e37f2da381f715df4fc9ebd9653c3aa4806de47ae5094ea1fc19b7f5b795a30'
 +            '4af9af9023132e0f0645c9552c613135780c2e378e6a21513cc54adaef5e45e80f8c312c0832559aae0b38c00c26277d351dd178767977a3f6bfdab02aec7710')
  validpgpkeys=(
    29D0817A67156E4F25DC24782A349DD577D586A5 # Matthew Holt <mholt@users.noreply.github.com>
