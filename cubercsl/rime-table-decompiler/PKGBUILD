@@ -1,0 +1,29 @@
+# Maintainer: cubercsl <2014cais01 at gmail dot com>
+
+pkgname=rime-table-decompiler
+pkgver=0.0.1
+pkgrel=1
+_commit=648f5fa0f6c692d3cf707dc1ada259618d7136e5
+pkgdesc="Rime binary dictionary file decompiler tool"
+arch=('x86_64')
+url="https://github.com/cubercsl/rime-table-decompiler"
+license=('BSD')
+source=("git+$url#commit=$_commit")
+sha256sums=('SKIP')
+depends=('boost-libs' 'marisa')
+makedepends=('boost' 'cmake' 'git')
+
+build() {
+  cd "$srcdir/$pkgname"
+  mkdir build
+  cd build
+  cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=$pkgdir/usr
+  make -j
+}
+
+package() {
+  cd "$srcdir/$pkgname/build"
+  make install
+}
