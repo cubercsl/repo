@@ -26,4 +26,6 @@ build() {
 package() {
   cd "$srcdir/$pkgname/build"
   make install
+  # install license
+  install -Dm644 "$srcdir/$pkgname/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }

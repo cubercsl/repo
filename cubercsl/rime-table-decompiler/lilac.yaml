@@ -3,7 +3,9 @@ maintainers:
 
 build_prefix: extra-x86_64
 
+post_build: git_pkgbuild_commit
+
 update_on:
   - alias: boost
-  
+
 # vim:set ts=4 sw=2 et:
