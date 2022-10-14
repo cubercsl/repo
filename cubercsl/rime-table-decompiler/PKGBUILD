@@ -2,7 +2,7 @@
 
 pkgname=rime-table-decompiler
 pkgver=0.0.1
-pkgrel=1
+pkgrel=2
 _commit=648f5fa0f6c692d3cf707dc1ada259618d7136e5
 pkgdesc="Rime binary dictionary file decompiler tool"
 arch=('x86_64')
