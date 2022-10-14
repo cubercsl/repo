@@ -3,15 +3,22 @@
 pkgname=rime-table-decompiler
 pkgver=0.0.1
 pkgrel=2
-_commit=648f5fa0f6c692d3cf707dc1ada259618d7136e5
 pkgdesc="Rime binary dictionary file decompiler tool"
 arch=('x86_64')
 url="https://github.com/cubercsl/rime-table-decompiler"
 license=('BSD')
-source=("git+$url#commit=$_commit")
+source=("git+$url")
 sha256sums=('SKIP')
 depends=('boost-libs' 'marisa')
 makedepends=('boost' 'cmake' 'git')
+
+pkgver() {
+  cd "$srcdir/$pkgname"
+  local date=$(git log -1 --format="%cd" --date=short | sed s/-//g)
+  local count=$(git rev-list --count HEAD)
+  local commit=$(git rev-parse --short HEAD)
+  echo "$date.r${count}.$commit"
+}
 
 build() {
   cd "$srcdir/$pkgname"
