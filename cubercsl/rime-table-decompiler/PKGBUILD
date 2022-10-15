@@ -1,7 +1,7 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 
 pkgname=rime-table-decompiler
-pkgver=20221015.r9.e3ed6ea
+pkgver=20221015.r10.06da0ce
 pkgrel=1
 pkgdesc="Rime binary dictionary file decompiler tool"
 arch=('x86_64')
