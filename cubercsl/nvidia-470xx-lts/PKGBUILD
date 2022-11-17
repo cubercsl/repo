@@ -1,6 +1,6 @@
 pkgname=nvidia-470xx-lts
 pkgver=470.141.03
-pkgrel=23
+pkgrel=24
 pkgdesc="NVIDIA drivers for linux"
 arch=('x86_64')
 url="https://www.nvidia.com/"
