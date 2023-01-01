@@ -40,6 +40,8 @@ package() {
 
     # Icon
     sed -i 's!Icon=.*!Icon=qq!' "${pkgdir}/usr/share/applications/qq.desktop"
+    # seems like we don't need this small icon
+    rm -rvf "${pkgdir}/usr/share/icons/hicolor/2x2"
 
     # License
     install -Dm644 "${pkgdir}/opt/QQ/LICENSE.electron.txt" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
