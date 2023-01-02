@@ -8,7 +8,13 @@
 #include <string.h>
 #endif
 
-X509 *SSL_get_peer_certificate(const SSL *s) { return NULL; }
+#ifdef SSL_get_peer_certificate
+#undef SSL_get_peer_certificate
+#endif
+
+X509 *SSL_get_peer_certificate(const SSL *s) {
+  return SSL_get1_peer_certificate(s);
+}
 
 #ifdef WRAP_FORCE_SINK_HARDWARE
 typedef pa_operation *(*wrap_pa_get_sink_by_name_t)(pa_context *c,
