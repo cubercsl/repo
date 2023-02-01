@@ -50,10 +50,12 @@ package_dae-git() {
 
     cd "$srcdir/$_pkgname"
     install -Dm755 "$srcdir/$_pkgname/dae" "$pkgdir/usr/bin/dae"
+    install -Dm644 "$srcdir/$_pkgname/install/dae.service" "$pkgdir/usr/lib/systemd/system/dae.service"
     install -Dm640 "$srcdir/$_pkgname/example.dae" "$pkgdir/etc/dae/config.dae"
 }
 
 package_dae-geoip-v2raycompat-git() {
+    arch=(any)
     desc="v2ray geoip compat for dae"
     depends=(v2ray-geoip)
     provides=($_pkgname-geoip-v2raycompat $_pkgname-geoip)
@@ -64,6 +66,7 @@ package_dae-geoip-v2raycompat-git() {
 }
 
 package_dae-geosite-v2raycompat-git() {
+    arch=(any)
     desc="v2ray geosite compat for dae"
     depends=(v2ray-domain-list-community)
     provides=($_pkgname-geosite-v2raycompat $_pkgname-geosite)
