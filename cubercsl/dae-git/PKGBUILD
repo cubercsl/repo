@@ -13,7 +13,6 @@ pkgdesc="A Linux lightweight and high-performance transparent proxy solution bas
 arch=(x86_64)
 url="https://github.com/v2rayA/dae"
 license=('AGPL')
-depends=(glibc)
 makedepends=(clang llvm go git libbpf bpf)
 source=("$_pkgname::git+https://github.com/v2rayA/dae")
 sha256sums=('SKIP')
@@ -71,5 +70,5 @@ package_dae-geosite-v2raycompat-git() {
     conflicts=($_pkgname-geosite-v2raycompat)
 
     install -dm755 "$pkgdir/usr/share/dae"
-    ln -s /usr/share/v2ray/domain-list-community.dat "$pkgdir/usr/share/dae/domain-list-community.dat"
+    ln -s /usr/share/v2ray/geosite.dat "$pkgdir/usr/share/dae/geosite.dat"
 }
