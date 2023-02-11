@@ -7,8 +7,8 @@ pkgname=(
     $_pkgname-geosite-v2raycompat-git
 
 )
-pkgver=r155.e269c4b
-pkgrel=2
+pkgver=r157.791e553
+pkgrel=1
 pkgdesc="A Linux lightweight and high-performance transparent proxy solution based on eBPF."
 arch=(x86_64)
 url="https://github.com/v2rayA/dae"
