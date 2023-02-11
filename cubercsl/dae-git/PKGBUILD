@@ -8,7 +8,7 @@ pkgname=(
 
 )
 pkgver=r155.e269c4b
-pkgrel=1
+pkgrel=2
 pkgdesc="A Linux lightweight and high-performance transparent proxy solution based on eBPF."
 arch=(x86_64)
 url="https://github.com/v2rayA/dae"
