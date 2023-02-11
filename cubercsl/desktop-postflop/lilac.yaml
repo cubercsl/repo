@@ -1,0 +1,16 @@
+maintainers:
+  - github: cubercsl
+
+build_prefix: extra-x86_64
+
+pre_build_script: update_pkgver_and_pkgrel(_G.newver)
+post_build: git_pkgbuild_commit
+
+update_on:
+  - source: github
+    github: b-inary/desktop-postflop
+    use_latest_release: true
+    prefix: v
+  - alias: libssl
+  - alias: libcrypto
+# vim:set ts=4 sw=2 et:

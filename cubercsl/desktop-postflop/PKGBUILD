@@ -1,0 +1,39 @@
+# Maintainer: cubercsl <2014cais01 at gmail dot com>
+
+pkgname=desktop-postflop
+pkgver=0.2.3
+pkgrel=1
+pkgdesc="A free and open-source GTO solver for Texas hold'em poker"
+arch=('x86_64')
+url='https://github.com/b-inary/desktop-postflop'
+license=('AGPL')
+depends=('webkit2gtk' 'gtk3')
+makedepends=('cargo-tauri' 'rust' 'npm'  'jq' 'moreutils')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+sha256sums=('2a809fc50996854f247ace224e2b48fcda5d5f96f6e55020533093efa0a07cf3')
+
+prepare() {
+    cd "$srcdir/$pkgname-$pkgver"
+    npm install
+    cd src-tauri
+    # remove the custom allocator feature for stable rust
+    sed -i 's/, features = \["custom-alloc"\]//' Cargo.toml
+	# only build the excutable
+	jq '.tauri.bundle.active = false' tauri.conf.json | sponge tauri.conf.json
+    cargo fetch --locked --target $CARCH-unknown-linux-gnu
+}
+
+build() {
+    cd "$srcdir/$pkgname-$pkgver"
+    cargo-tauri build -- --frozen
+}
+
+package() {
+    cd "$srcdir/$pkgname-$pkgver"
+    install -vDm755 "src-tauri/target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
+    # icons
+    install -vDm644 "src-tauri/icons/32x32.png" "$pkgdir/usr/share/icons/hicolor/32x32/apps/$pkgname.png"
+    install -vDm644 "src-tauri/icons/128x128.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/$pkgname.png"
+    install -vDm644 "src-tauri/icons/128x128@2x.png" "$pkgdir/usr/share/icons/hicolor/256x256/apps/$pkgname.png"
+}
+

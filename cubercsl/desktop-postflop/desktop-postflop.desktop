@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=Utility;
+Exec=desktop-postflop
+Icon=desktop-postflop
+Name=Desktop Postflop
+Terminal=false
+Type=Application
