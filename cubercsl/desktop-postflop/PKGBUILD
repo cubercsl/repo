@@ -2,7 +2,7 @@
 
 pkgname=desktop-postflop
 pkgver=0.2.3
-pkgrel=1
+pkgrel=2
 pkgdesc="A free and open-source GTO solver for Texas hold'em poker"
 arch=('x86_64')
 url='https://github.com/b-inary/desktop-postflop'
