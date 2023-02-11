@@ -8,6 +8,7 @@ arch=('x86_64')
 url='https://github.com/b-inary/desktop-postflop'
 license=('AGPL')
 depends=('webkit2gtk' 'gtk3')
+optdepends=('xdg-desktop-portal: file picker desktop integration')
 makedepends=('cargo-tauri' 'rust' 'npm'  'jq' 'moreutils')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
         "$pkgname.desktop")
