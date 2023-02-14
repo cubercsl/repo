@@ -7,22 +7,22 @@ arch=('x86_64')
 url='https://github.com/cloudreve/Cloudreve'
 license=('GPL')
 depends=('glibc')
-makedepends=('go')
+makedepends=('go' 'git')
 optdepends=('aria2: offline download support')
 source=(
-  "$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz"
+  "$pkgname::git+https://github.com/cloudreve/Cloudreve#tag=$pkgver"
   'systemd.service'
   'sysusers.conf'
   'tmpfiles.conf'
 )
-sha256sums=('65deb97961c2b8c14596bcec85a811e02f09cd4e513decde9b564fc6062d3907'
+sha256sums=('SKIP'
             'c2e11a1f08300b7ba1b1284865aec80e7fffc184744bd8be0aad4a46525c41c7'
             '95a772e2f9529ed8693f7362e9ee5a549230162a10f73308ee8b8622b1864c91'
             '15ecca797fdf095d5abb31809436ee5de84102ef4fb2d88833aa3d10a4c0a6ee')
 options=(emptydirs)
 
 build() {
-  cd "Cloudreve-$pkgver"
+  cd "$pkgname"
   
   mkdir -p build # create build dir
 
@@ -51,7 +51,7 @@ package() {
   install -vDm644 sysusers.conf "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
   install -vDm644 tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
   
-  cd "Cloudreve-$pkgver"
+  cd "$pkgname"
  
   install -vdm750 "$pkgdir/var/lib/$pkgname"
   install -vDm755 build/$pkgname "$pkgdir/var/lib/$pkgname/$pkgname"
