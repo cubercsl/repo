@@ -10,7 +10,7 @@ depends=('glibc')
 makedepends=('go')
 optdepends=('aria2: offline download support')
 source=(
-  "$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
+  "$pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz"
   'systemd.service'
   'sysusers.conf'
   'tmpfiles.conf'
@@ -22,7 +22,7 @@ sha256sums=('SKIP'
 options=(emptydirs)
 
 build() {
-  cd "$pkgname-$pkgver"
+  cd "Cloudreve-$pkgver"
   
   mkdir -p build # create build dir
 
@@ -51,7 +51,7 @@ package() {
   install -vDm644 sysusers.conf "$pkgdir/usr/lib/sysusers.d/$pkgname.conf"
   install -vDm644 tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/$pkgname.conf"
   
-  cd "$pkgname-$pkgver"
+  cd "Cloudreve-$pkgver"
  
   install -vdm750 "$pkgdir/var/lib/$pkgname"
   install -vDm755 build/$pkgname "$pkgdir/var/lib/$pkgname/$pkgname"
