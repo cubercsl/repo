@@ -1,6 +1,6 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 pkgname=cloudreve
-pkgver=3.7.0
+pkgver=3.7.1
 pkgrel=1
 pkgdesc='Self-hosted file management and sharing system, supports multiple storage providers'
 arch=('x86_64')
@@ -15,7 +15,7 @@ source=(
   'sysusers.conf'
   'tmpfiles.conf'
 )
-sha256sums=('SKIP'
+sha256sums=('65deb97961c2b8c14596bcec85a811e02f09cd4e513decde9b564fc6062d3907'
             'c2e11a1f08300b7ba1b1284865aec80e7fffc184744bd8be0aad4a46525c41c7'
             '95a772e2f9529ed8693f7362e9ee5a549230162a10f73308ee8b8622b1864c91'
             '15ecca797fdf095d5abb31809436ee5de84102ef4fb2d88833aa3d10a4c0a6ee')
