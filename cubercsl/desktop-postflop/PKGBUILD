@@ -20,8 +20,8 @@ prepare() {
     cd src-tauri
     # remove the custom allocator feature for stable rust
     sed -i 's/, features = \["custom-alloc"\]//' Cargo.toml
-	# only build the excutable
-	jq '.tauri.bundle.active = false' tauri.conf.json | sponge tauri.conf.json
+    # only build the excutable
+    jq '.tauri.bundle.active = false' tauri.conf.json | sponge tauri.conf.json
     cargo fetch --locked --target $CARCH-unknown-linux-gnu
 }
 
