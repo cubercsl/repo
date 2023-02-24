@@ -5,7 +5,7 @@
 pkgbase=ant-dracula-theme-git
 pkgname=(ant-dracula-{,kde-,kvantum-}theme-git)
 _pkgname=Dracula
-pkgver=3.0.r95.f9fbda8
+pkgver=4.0.0.r2.0ef29b8
 pkgrel=1
 pkgdesc="Dracula variant of the Ant theme"
 arch=("any")
