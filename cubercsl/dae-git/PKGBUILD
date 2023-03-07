@@ -47,11 +47,13 @@ package_dae-git() {
         dae-geosite
     )
     backup=("etc/dae/config.dae")
+    install=dae.install
 
     cd "$srcdir/$_pkgname"
     install -Dm755 "$srcdir/$_pkgname/dae" "$pkgdir/usr/bin/dae"
     install -Dm644 "$srcdir/$_pkgname/install/dae.service" "$pkgdir/usr/lib/systemd/system/dae.service"
-    install -Dm640 "$srcdir/$_pkgname/example.dae" "$pkgdir/etc/dae/config.dae"
+    install -Dm640 "$srcdir/$_pkgname/install/empty.dae" "$pkgdir/etc/dae/config.dae"
+    install -Dm644 "$srcdir/$_pkgname/example.dae" "$pkgdir/etc/dae/config.dae.example"
 }
 
 package_dae-geoip-v2raycompat-git() {
