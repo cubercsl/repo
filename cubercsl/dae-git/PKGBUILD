@@ -8,7 +8,7 @@ pkgname=(
 
 )
 pkgver=r274.41cab77
-pkgrel=1
+pkgrel=2
 pkgdesc="A Linux lightweight and high-performance transparent proxy solution based on eBPF."
 arch=(x86_64)
 url="https://github.com/v2rayA/dae"
@@ -47,7 +47,6 @@ package_dae-git() {
         dae-geosite
     )
     backup=("etc/dae/config.dae")
-    install=dae.install
 
     cd "$srcdir/$_pkgname"
     install -Dm755 "$srcdir/$_pkgname/dae" "$pkgdir/usr/bin/dae"
