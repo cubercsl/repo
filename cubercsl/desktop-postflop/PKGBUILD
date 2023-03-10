@@ -1,8 +1,8 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 
 pkgname=desktop-postflop
-pkgver=0.2.3
-pkgrel=3
+pkgver=0.2.4
+pkgrel=1
 pkgdesc="A free and open-source GTO solver for Texas hold'em poker"
 arch=('x86_64')
 url='https://github.com/b-inary/desktop-postflop'
@@ -11,7 +11,7 @@ depends=('webkit2gtk' 'gtk3')
 makedepends=('cargo-tauri' 'rust' 'npm'  'jq' 'moreutils')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
         "$pkgname.desktop")
-sha256sums=('2a809fc50996854f247ace224e2b48fcda5d5f96f6e55020533093efa0a07cf3'
+sha256sums=('aaa2c10a884427df0f41c7b2be219d78e658d08a9c149654018c277e85c4ee69'
             '4c9b49d2ab15c9bbb6957218b58d9f7f5da60eaf7a77c4e90729ca023ba2fd24')
 
 prepare() {
