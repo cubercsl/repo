@@ -7,7 +7,7 @@ pkgname=(
     $_pkgname-geosite-v2raycompat-git
 
 )
-pkgver=r390.27d437c
+pkgver=r391.7c47ed4
 pkgrel=1
 pkgdesc="A Linux lightweight and high-performance transparent proxy solution based on eBPF."
 arch=(x86_64)
