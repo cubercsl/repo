@@ -27,4 +27,5 @@ package() {
     mv "$tmppackage" "$pkgjson"
     chmod 644 "$pkgjson"
     chmod u=rwX,go=rX,go-w -R "$pkgdir/usr/lib/node_modules/$_npmname"
+    chown -R root:root "$pkgdir"
 }
