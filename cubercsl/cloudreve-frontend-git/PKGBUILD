@@ -1,7 +1,7 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 pkgname=cloudreve-frontend-git
 _pkgname=cloudreve
-pkgver=r590.5e66c6f
+pkgver=r594.aa86965
 pkgrel=1
 pkgdesc='Cloudreve V3 的前端'
 arch=('any')
