@@ -2,8 +2,8 @@
 # Contributor: Yidaozhan Ya <yidaozhan_ya@outlook.com>
 # Contributor: Integral <luckys68@126.com>
 pkgname=linuxqq
-_md5_prefix=2355235c
-pkgver=3.1.1_11223
+_md5_prefix=ad5b5393
+pkgver=3.1.2_13107
 pkgrel=1
 pkgdesc='New Linux QQ based on Electron'
 arch=('x86_64' 'aarch64')
@@ -24,8 +24,8 @@ depends=(
 optdepends=('libappindicator-gtk3: Allow QQ to extend a menu via Ayatana indicators in Unity, KDE or Systray (GTK+ 3 library).')
 source_x86_64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5_prefix}/linuxqq_${pkgver//_/-}_amd64.deb")
 source_aarch64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5_prefix}/linuxqq_${pkgver//_/-}_arm64.deb")
-sha512sums_x86_64=('6d9929bbc6d67ac11612db8c8f707cc4d85d4730afd08b01aa78d77d6ae60ac5c8d2556ed6b5e3667fa2f7029f7a3016eb9f2fd69044a37dccf4effeafadcf37')
-sha512sums_aarch64=('459016e9668cdeb3e6ba3206d749f469c3c200916abcb5a7dc3d913fc718497324a5dfb932137e9d1c94d7c5db1912858cb185ee058065e58ac29b6365454594')
+sha512sums_x86_64=('a65ab1eaf562de03ef7537ec1bb53e44ec775b079e39217afffde45708c6b3d686ac398c00ebdf8f6641c4d18a46e0a9176fb5f5336ac53de0e1da0e1d1f2b90')
+sha512sums_aarch64=('6d9b12b03fb5682fac4f6be10242a83b93e58e296905d85d49820cab6419fd66231095ce41b29f33bd65ba716f6cf40b12a835f233e20a5cbf66e692c1fb10c0')
 
 package() {
     echo "  -> Extracting the data.tar.xz..."
