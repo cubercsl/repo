@@ -5,7 +5,7 @@ pkgdesc="Tools for Cubercsl repo"
 arch=('any')
 depends=('devtools')
 license=('GPL')
-source=("pacman-cubercsl.conf")
+source=("cubercsl.conf")
 sha512sums=('a4431988d9948ade9054c6a0acc17bd9693b47f089f2b2470ebe5ac9741cca8f8727ea02b785ffcd081d31c355fffccada29c5b570e5ca16d60d88d61c1fd333')
 
 
@@ -13,5 +13,5 @@ sha512sums=('a4431988d9948ade9054c6a0acc17bd9693b47f089f2b2470ebe5ac9741cca8f872
 package() {
   mkdir -p "$pkgdir/usr/bin"
   ln -s archbuild "$pkgdir/usr/bin/cubercsl-x86_64-build"
-  install -Dm644 pacman-cubercsl.conf "$pkgdir/usr/share/devtools/pacman-cubercsl.conf" ``
+  install -Dm644 cubercsl.conf "$pkgdir/usr/share/devtools/pacman.conf.d/cubercsl.conf" ``
 }
