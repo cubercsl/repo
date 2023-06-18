@@ -1,19 +1,13 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
-pkgbase=dae-git
-_pkgname=${pkgbase%-git}
-pkgname=(
-    $_pkgname-git
-    $_pkgname-geoip-v2raycompat-git
-    $_pkgname-geosite-v2raycompat-git
-
-)
-pkgver=r502.1546f30
+pkgname=dae-git
+_pkgname=${pkgname%-git}
+pkgver=r497.962018d
 pkgrel=1
 pkgdesc="A Linux lightweight and high-performance transparent proxy solution based on eBPF."
 arch=(x86_64)
 url="https://github.com/v2rayA/dae"
 license=('AGPL')
-makedepends=(clang llvm go git libbpf bpf)
+makedepends=(clang llvm go git)
 source=("$_pkgname::git+https://github.com/v2rayA/dae")
 sha256sums=('SKIP')
 options=(!debug)
@@ -33,46 +27,28 @@ prepare() {
 
 build() {
     export GOFLAGS="-buildmode=pie -trimpath -modcacherw"
-    export CFLAGS=""
+    export CFLAGS="-fno-stack-protector"
     cd "$srcdir/$_pkgname"
     make VERSION="unstable-$pkgver"
 }
 
-package_dae-git() {
+package() {
     provides=($_pkgname)
     conflicts=($_pkgname)
     depends=(
         glibc
-        dae-geoip
-        dae-geosite
+        v2ray-geoip
+        v2ray-domain-list-community
     )
     backup=("etc/dae/config.dae")
 
     cd "$srcdir/$_pkgname"
-    install -Dm755 "$srcdir/$_pkgname/dae" "$pkgdir/usr/bin/dae"
-    install -Dm644 "$srcdir/$_pkgname/install/dae.service" "$pkgdir/usr/lib/systemd/system/dae.service"
-    install -Dm640 "$srcdir/$_pkgname/install/empty.dae" "$pkgdir/etc/dae/config.dae"
-    install -Dm644 "$srcdir/$_pkgname/example.dae" "$pkgdir/etc/dae/config.dae.example"
-}
+    install -vDm755 "$srcdir/$_pkgname/dae" "$pkgdir/usr/bin/dae"
+    install -vDm644 "$srcdir/$_pkgname/install/dae.service" "$pkgdir/usr/lib/systemd/system/dae.service"
+    install -vDm640 "$srcdir/$_pkgname/install/empty.dae" "$pkgdir/etc/dae/config.dae"
+    install -vDm644 "$srcdir/$_pkgname/example.dae" "$pkgdir/etc/dae/config.dae.example"
 
-package_dae-geoip-v2raycompat-git() {
-    arch=(any)
-    desc="v2ray geoip compat for dae"
-    depends=(v2ray-geoip)
-    provides=($_pkgname-geoip-v2raycompat $_pkgname-geoip)
-    conflicts=($_pkgname-geoip-v2raycompat)
-
-    install -dm755 "$pkgdir/usr/share/dae"
-    ln -s /usr/share/v2ray/geoip.dat "$pkgdir/usr/share/dae/geoip.dat"
-}
-
-package_dae-geosite-v2raycompat-git() {
-    arch=(any)
-    desc="v2ray geosite compat for dae"
-    depends=(v2ray-domain-list-community)
-    provides=($_pkgname-geosite-v2raycompat $_pkgname-geosite)
-    conflicts=($_pkgname-geosite-v2raycompat)
-
-    install -dm755 "$pkgdir/usr/share/dae"
-    ln -s /usr/share/v2ray/geosite.dat "$pkgdir/usr/share/dae/geosite.dat"
+    mkdir -p "$pkgdir/usr/share/dae"
+    ln -vs /usr/share/v2ray/geoip.dat $pkgdir/usr/share/dae/geoip.dat 
+    ln -vs /usr/share/v2ray/geosite.dat $pkgdir/usr/share/dae/geosite.dat 
 }

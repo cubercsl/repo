@@ -1,12 +1,12 @@
 pkgname=devtools-cubercsl
-pkgver=1
+pkgver=1.1
 pkgrel=1
 pkgdesc="Tools for Cubercsl repo"
 arch=('any')
 depends=('devtools')
 license=('GPL')
 source=("cubercsl.conf")
-sha512sums=('a4431988d9948ade9054c6a0acc17bd9693b47f089f2b2470ebe5ac9741cca8f8727ea02b785ffcd081d31c355fffccada29c5b570e5ca16d60d88d61c1fd333')
+sha512sums=('bfb28abe87fb3b415f027c2e3f3bcc99c2bdc53803c4c1937c6c7cea5559e1bb67c8bb3d5ddf93c8e48a676669bac5d2bf98c3ea7b132149784f762fb2a5c283')
 
 
 
