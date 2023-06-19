@@ -5,18 +5,18 @@ pkgver=r505.029849d
 pkgrel=1
 pkgdesc="A Linux lightweight and high-performance transparent proxy solution based on eBPF."
 arch=(x86_64)
-url="https://github.com/v2rayA/dae"
+url="https://github.com/daeuniverse/dae"
 license=('AGPL')
 makedepends=(clang llvm go git)
-source=("$_pkgname::git+https://github.com/v2rayA/dae")
+source=("$_pkgname::git+https://github.com/daeuniverse/dae")
 sha256sums=('SKIP')
 options=(!debug)
 
 pkgver() {
     cd "$srcdir/$_pkgname"
     ( set -o pipefail
-      git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
-      printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+      git describe --long --abbrev=7 2>/dev/null | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+      printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
     )
 }
 

@@ -2,7 +2,7 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 pkgname=daed-git
 _pkgname=${pkgname%-git}
-pkgver=v0.1.0rc.r2.g3e2abf3
+pkgver=0.1.0rc.r2.g3e2abf3
 pkgrel=1
 pkgdesc="A modern dashboard for dae, bundled with dae-wing (backend API server) and dae (core)."
 arch=(x86_64)
@@ -18,8 +18,8 @@ options=(!debug)
 pkgver() {
     cd "$srcdir/$_pkgname"
     ( set -o pipefail
-      git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
-      printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+      git describe --long --abbrev=7 2>/dev/null | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+      printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
     )
 }
 
