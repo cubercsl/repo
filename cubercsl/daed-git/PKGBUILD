@@ -2,7 +2,7 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 pkgname=daed-git
 _pkgname=${pkgname%-git}
-pkgver=0.1.0rc.r31.g28acd26
+pkgver=0.1.0rc.r32.g0bf6eb1
 pkgrel=1
 pkgdesc="A modern dashboard for dae, bundled with dae-wing (backend API server) and dae (core)."
 arch=(x86_64)
