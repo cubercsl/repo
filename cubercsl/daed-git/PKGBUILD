@@ -47,6 +47,7 @@ package() {
     install -vDm755 "${_pkgname}" -t "${pkgdir}/usr/bin/"
 	install -vDm644 "install/${_pkgname}.service" -t "${pkgdir}/usr/lib/systemd/system/"
 	install -vDm644 "LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}"
+	install -vDm644 "LICENSE-MIT" -t "${pkgdir}/usr/share/licenses/${pkgname}"
 	install -d "${pkgdir}/etc/daed/"
 
     mkdir -p "$pkgdir/usr/share/daed"
