@@ -1,7 +1,7 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 pkgname=dae-git
 _pkgname=${pkgname%-git}
-pkgver=0.2.0rc4.r0.g1a9afb0
+pkgver=0.2.0rc4.r1.g0bac1c6
 pkgrel=1
 pkgdesc="A Linux lightweight and high-performance transparent proxy solution based on eBPF."
 arch=(x86_64)
