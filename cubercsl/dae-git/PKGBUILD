@@ -2,7 +2,7 @@
 pkgname=dae-git
 _pkgname=${pkgname%-git}
 pkgver=0.2.4rc2.r7.ga32bd81
-pkgrel=1
+pkgrel=2
 pkgdesc="A Linux lightweight and high-performance transparent proxy solution based on eBPF."
 arch=(x86_64)
 url="https://github.com/daeuniverse/dae"
