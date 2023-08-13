@@ -4,7 +4,7 @@ maintainers:
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers=['jonathon', 'Menelkir'])
+pre_build_script: aur_pre_build(maintainers=['Sinyria', 'cysp74', 'SoftExpert'])
 
 post_build: aur_post_build
 

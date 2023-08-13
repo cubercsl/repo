@@ -27,11 +27,3 @@ package() {
 
     install -Dm644 /usr/share/licenses/nvidia-470xx-dkms/LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
-
-
-
-
-
-
-
-
