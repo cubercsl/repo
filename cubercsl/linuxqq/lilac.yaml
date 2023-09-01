@@ -5,5 +5,5 @@ update_on:
   - source: regex
     url: https://im.qq.com/rainbow/linuxQQDownload
     encoding: utf-8
-    regex: linuxqq_(.*)_amd64.deb
+    regex: linuxqq_(.*?)_amd64.deb
     
