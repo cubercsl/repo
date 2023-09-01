@@ -4,7 +4,7 @@
 pkgname=linuxqq
 _md5_prefix=1776936e
 pkgver=3.2.0_16605
-pkgrel=1
+pkgrel=2
 pkgdesc='New Linux QQ based on Electron'
 arch=('x86_64' 'aarch64')
 url="https://im.qq.com/linuxqq/"
