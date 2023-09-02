@@ -2,7 +2,7 @@
 
 pkgname=rime-table-decompiler
 pkgver=20221021.r8.48b1e24
-pkgrel=2
+pkgrel=3
 pkgdesc="Rime binary dictionary file decompiler tool"
 arch=('x86_64')
 url="https://github.com/cubercsl/rime-table-decompiler"
