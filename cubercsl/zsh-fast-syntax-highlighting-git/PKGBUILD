@@ -2,7 +2,7 @@
 # Contributor: Niklas Bolander <niklas.bolander at gmail dot com>
 
 pkgname=zsh-fast-syntax-highlighting-git
-pkgver=r884.9a5a4a5
+pkgver=r912.cf318e0
 pkgrel=1
 pkgdesc='Optimized and extended zsh-syntax-highlighting'
 arch=('any')
