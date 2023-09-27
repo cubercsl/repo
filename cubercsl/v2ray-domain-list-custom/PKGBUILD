@@ -1,7 +1,7 @@
 # Maintainer: so1ar <so1ar114514@gmail.com>
 
 pkgname=v2ray-domain-list-custom
-pkgver=202309192208
+pkgver=202309262208
 pkgrel=1
 pkgdesc="A list of domains to be used as geosites for routing purpose in Project V"
 arch=('any')
@@ -12,7 +12,7 @@ conflicts=('v2ray-domain-list-community')
 
 source=("geosite-$pkgver.dat::https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$pkgver/geosite.dat")
 
-sha256sums=('632bf5b9a1bca5fc12c3d672ad890ad1ccbb3e9ada48031fa1f19687219f0b69')
+sha256sums=('a0533ada45f9c21e42c7aa49993b8d27eb0db87f1e34a1b268c7c2f4be5b5b56')
 
 package() {
   install -Dm644 geosite-$pkgver.dat "$pkgdir"/usr/share/v2ray/geosite.dat
