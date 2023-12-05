@@ -27,7 +27,6 @@ build() {
 
 package_rime-flypy() {
     pkgdesc="小鹤音形 rime 挂接文件"
-    depends=('rime-lua-hook')
     optdepends=('ibus-rime: input support'
                 'fcitx-rime: input support'
                 'fcitx5-rime: input support')
