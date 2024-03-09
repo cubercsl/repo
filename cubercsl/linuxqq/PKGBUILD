@@ -34,7 +34,7 @@ package() {
 
     echo "  -> Installing..."
     # Launcher
-    install -Dm755 "${srcdir}/linuxqq.sh" "${pkgdir}/usr/bin/${pkgname}"
+    install -Dm755 "${srcdir}/linuxqq.sh" "${pkgdir}/usr/bin/qq"
 
     # Launcher Fix
     sed -i 's!Exec=.*!Exec=qq %U!' "${pkgdir}/usr/share/applications/qq.desktop"
