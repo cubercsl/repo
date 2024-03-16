@@ -48,5 +48,5 @@ package() {
     install -Dm644 "${pkgdir}/opt/QQ/LICENSE.electron.txt" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dm644 "${pkgdir}/opt/QQ/LICENSES.chromium.html" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 
-    rm -f "${pkgdir}"/opt/QQ/resources/app/{libssh2.so.1,libunwind*,sharp-lib/libvips-cpp.so.42}
+    rm -f "${pkgdir}"/opt/QQ/resources/app/{libssh2.so.1,sharp-lib/libvips-cpp.so.42}
 }
