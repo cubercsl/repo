@@ -4,7 +4,7 @@ maintainers:
 update_on:
   - source: alpm
     alpm: caddy
-    repo: community
+    repo: extra
   - source: github
     github: caddy-dns/cloudflare
   - source: manual
