@@ -5,8 +5,6 @@ update_on:
   - source: alpm
     alpm: caddy
     repo: extra
-  - source: github
-    github: caddy-dns/cloudflare
   - source: manual
     manual: 1
 # vim:set ts=4 sw=2 et:
