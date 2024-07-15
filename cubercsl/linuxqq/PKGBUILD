@@ -2,7 +2,7 @@
 # Contributor: Yidaozhan Ya <yidaozhan_ya@outlook.com>
 # Contributor: Integral <luckys68@126.com>
 pkgname=linuxqq
-pkgver=3.2.9_240617
+pkgver=3.2.10_240715
 pkgrel=1
 pkgdesc='New Linux QQ based on Electron'
 arch=('x86_64')
@@ -26,7 +26,7 @@ source=(
     "https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${pkgver}_amd64_01.deb"
 )
 sha512sums=('3c7de6b7e1de75ebd7fe80adba6a080dcbf48aa7e73d5278daa9fd76d607a268f8aace886ea4ddb0c8d597a1dc3305a6f8272c1922edc5bd29b60ed6bddb3412'
-            '1d4903f59ccee30bae10eaff92adaafacb3c72ec5efe5194acbb1b70b36441cb8fa27edfe7b0b1dee80c91f8075c23b08bdce733eace2fd650e2f6bbc958854f')
+            'b8798b199bf4a2f83b802576b09b451a4fe213224095387370a658e52fb50be090e12c14855c69d08ec970f18011bc457a10338ed4d5a479a33eced77172cf61')
 
 package() {
     echo "  -> Extracting the data.tar.xz..."
