@@ -7,10 +7,11 @@
 
 pkgbase=wps-office-cn
 pkgname=('wps-office-cn' 'wps-office-mime-cn' 'wps-office-mui-zh-cn')
-pkgver=11.1.0.11719
+pkgver=11.1.0.11723
 pkgrel=1
 pkgdesc="Kingsoft Office (WPS Office) CN version - an office productivity suite"
-arch=('x86_64' 'aarch64')
+#arch=('x86_64' 'aarch64')
+arch=('x86_64')
 license=('LicenseRef-WPS-EULA')
 url="https://linux.wps.cn"
 options=('!emptydirs')
@@ -30,11 +31,10 @@ _get_source_url() {
 
 #source_x86_64=("https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_${pkgver}_amd64.deb")
 source_x86_64=("wps-office_${pkgver}_amd64.deb::$(_get_source_url amd64)")
-source_aarch64=("wps-office_${pkgver}_arm64.deb::$(_get_source_url arm64)")
+#source_aarch64=("wps-office_${pkgver}_arm64.deb::$(_get_source_url arm64)")
 source=('fix-wps-python-parse.patch')
 sha1sums=('f3713481edf04ffb08be8d24dce66554dd5a4f13')
-sha1sums_x86_64=('31651fdf617b55d22aef19783182e969f8f1e222')
-sha1sums_aarch64=('990c3dcc276118d31907e6d17ac3c1d3f304b6c1')
+sha1sums_x86_64=('7ef522d02341ad2904e6d97024c19dff6fb92d2c')
 
 prepare() {
     bsdtar -xpf data.tar.xz
@@ -56,7 +56,7 @@ prepare() {
 }
 
 package_wps-office-cn() {
-    depends=('fontconfig' 'xorg-mkfontdir' 'libxrender' 'desktop-file-utils' 'shared-mime-info' 'xdg-utils' 'glu' 'openssl-1.1' 'sdl2' 'libpulse' 'hicolor-icon-theme' 'libxss' 'sqlite' 'libtool' 'libxslt' 'qt5-base' 'libjpeg-turbo')
+    depends=('fontconfig' 'xorg-mkfontscale' 'libxrender' 'desktop-file-utils' 'shared-mime-info' 'xdg-utils' 'glu' 'sdl2' 'libpulse' 'hicolor-icon-theme' 'libxss' 'sqlite' 'libtool' 'libxslt' 'libjpeg-turbo')
     optdepends=('libtiff5: Provide libtiff.so.5 for wpspdf working'
                 'cups: for printing support'
                 'libjpeg-turbo: JPEG image codec support'
