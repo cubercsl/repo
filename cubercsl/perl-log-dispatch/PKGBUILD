@@ -4,7 +4,7 @@
 
 pkgname=perl-log-dispatch
 pkgver=2.71
-pkgrel=2
+pkgrel=3
 pkgdesc="Dispatches messages to one or more outputs"
 arch=('any')
 license=('PerlArtistic' 'GPL')
