@@ -4,7 +4,7 @@
 
 pkgname=walinuxagent
 _pkgname=WALinuxAgent
-pkgver=2.11.1.12
+pkgver=2.12.0.2 
 pkgrel=1
 pkgdesc="Microsoft Azure Linux Agent"
 arch=('any')
@@ -15,7 +15,7 @@ makedepends=('python-setuptools')
 backup=("etc/waagent.conf")
 source=("https://github.com/Azure/WALinuxAgent/archive/v${pkgver}.tar.gz"
         "use-arch-udev-files-dest.patch")
-sha256sums=('faab56182f55b6dd44e7c018305637e4a1708d5388fe1a8524e020825eac5f92'
+sha256sums=('e7a2507c7815d6ad49227c6dd4259949ae01efbfd8ccd7bf8e79bdf051851fb0'
             '0a460c3bdac39cc2c68f4c5707254c3108c6f792982757a746bfd19adbc48ca4')
 
 prepare() {
