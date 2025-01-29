@@ -8,7 +8,3 @@ post_build: git_pkgbuild_commit
 update_on:
   - source: github
     github: daeuniverse/daed
-  - source: github
-    github: daeuniverse/dae-wing
-  - source: github
-    github: daeuniverse/dae
