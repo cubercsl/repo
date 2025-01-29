@@ -1,7 +1,7 @@
 # Maintainer: cubercsl <2014cais01 at gmail dot com>
 pkgname=tiny-dfr
 pkgver=0.3.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Apple silicon touch bar input / display daemon"
 url="https://github.com/WhatAmISupposedToPutHere/tiny-dfr"
 arch=('x86_64')
