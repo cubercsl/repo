@@ -1,0 +1,30 @@
+# Maintainer: cubercsl <2014cais01 at gmail dot com>
+pkgname=tiny-dfr
+pkgver=0.3.2
+pkgrel=1
+pkgdesc="Apple silicon touch bar input / display daemon"
+url="https://github.com/WhatAmISupposedToPutHere/tiny-dfr"
+arch=('x86_64')
+license=("MIT")
+depends=(pango libinput gdk-pixbuf2 libxml2)
+makedepends=(git cargo)
+source=("$pkgname-$pkgver.tar.gz::https://github.com/WhatAmISupposedToPutHere/tiny-dfr/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('a70128dd04bc1dfba778f3756a89a3c36eb398c0d0f1604e0b47f8ef62b8d4af')
+
+build() {
+    cd "$pkgname-$pkgver"
+
+	cargo build --release --locked --all-features
+}
+
+
+package() {
+    cd "$pkgname-$pkgver"
+
+	install -Dm755 target/release/$pkgname "$pkgdir"/usr/bin/$pkgname
+	install -Dm644 share/$pkgname/*.svg -t "$pkgdir/usr/share/$pkgname"
+	install -Dm644 share/$pkgname/config.toml -t "$pkgdir/usr/share/$pkgname"
+	install -Dm644 etc/udev/rules.d/99-touchbar-seat.rules "$pkgdir/usr/lib/udev/rules.d/99-touchbar-seat.rules"
+	install -Dm644 etc/udev/rules.d/99-touchbar-tiny-dfr.rules "$pkgdir/usr/lib/udev/rules.d/99-touchbar-tiny-dfr.rules"
+    install -Dm644 etc/systemd/system/*.service -t "$pkgdir/usr/lib/systemd/system"
+}
