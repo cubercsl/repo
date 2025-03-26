@@ -3,12 +3,12 @@ pkgname=tiny-dfr
 pkgver=0.3.3
 pkgrel=2
 pkgdesc="Apple silicon touch bar input / display daemon"
-url="https://github.com/WhatAmISupposedToPutHere/tiny-dfr"
+url="https://github.com/AsahiLinux/tiny-dfr"
 arch=('x86_64')
 license=("MIT")
-depends=(pango libinput gdk-pixbuf2 libxml2)
+depends=(pango libinput gdk-pixbuf2 libxml2 librsvg)
 makedepends=(git cargo)
-source=("$pkgname-$pkgver.tar.gz::https://github.com/WhatAmISupposedToPutHere/tiny-dfr/archive/refs/tags/v$pkgver.tar.gz")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/AsahiLinux/tiny-dfr/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=('4ad8f26b1b283d362e33d0f8f9f0c379a189dfa1c6512dac57b7e47808c0d056')
 
 build() {
