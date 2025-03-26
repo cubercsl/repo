@@ -7,6 +7,6 @@ post_build: git_pkgbuild_commit
 
 update_on:
   - source: github
-    github: WAsahiLinux/tiny-dfr
+    github: AsahiLinux/tiny-dfr
     use_latest_tag: true
 # vim:set ts=4 sw=2 et:
