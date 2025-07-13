@@ -3,7 +3,7 @@ maintainers:
 
 update_on:
   - source: regex
-    url: https://im.qq.com/rainbow/linuxQQDownload
+    url: https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js
     encoding: utf-8
     regex: QQ_(.*?)_amd64_01.deb
     
