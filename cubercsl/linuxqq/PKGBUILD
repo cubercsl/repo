@@ -48,5 +48,6 @@ package() {
     install -Dm644 "${pkgdir}/opt/QQ/LICENSE.electron.txt" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dm644 "${pkgdir}/opt/QQ/LICENSES.chromium.html" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 
-    rm -f "${pkgdir}"/opt/QQ/resources/app/{libssh2.so.1,sharp-lib/libvips-cpp.so.42}
+    # Temporary Solution: Remove libvips and libssh2 which comes from package "linuxqq" itself
+    rm -fv ${pkgdir}/opt/QQ/resources/app/{sharp-lib/libvips-cpp.so.42,{,avsdk/bugly/}libssh2.so.1}
 }
