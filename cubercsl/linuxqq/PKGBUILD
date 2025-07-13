@@ -3,7 +3,7 @@
 # Contributor: Integral <luckys68@126.com>
 pkgname=linuxqq
 pkgver=3.2.18_250626
-pkgrel=1
+pkgrel=2
 pkgdesc='New Linux QQ based on Electron'
 arch=('x86_64')
 url="https://im.qq.com/linuxqq/"
@@ -25,7 +25,7 @@ source=(
     "linuxqq.sh"
     "https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${pkgver}_amd64_01.deb"
 )
-sha512sums=('3c7de6b7e1de75ebd7fe80adba6a080dcbf48aa7e73d5278daa9fd76d607a268f8aace886ea4ddb0c8d597a1dc3305a6f8272c1922edc5bd29b60ed6bddb3412'
+sha512sums=('e06676ac2297cba5d20877ac82ef506a9596980bc66257952f37d45ef9810953aedb789655d004b3fd0ac548f2f085e1be406081d9c8d5321622567431c7b3da'
             'bc9e3265ad046ea9a8779d957728e893e124dbffcb40646aaa3e0273dc3d68fb92528374e96c32967bd767d02ab8563ec699839e9d7c4a73fabe82f886041f0d')
 
 package() {
