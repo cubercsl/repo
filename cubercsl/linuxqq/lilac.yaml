@@ -2,8 +2,5 @@ maintainers:
   - github: cubercsl
 
 update_on:
-  - source: regex
-    url: https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js
-    encoding: utf-8
-    regex: QQ_(.*?)_amd64_01.deb
-    
+  - source: cmd
+    cmd:  curl -s https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js | grep -oP '(?<=QQ_)[0-9.]+_[0-9]+(?=_amd64)' | head -n 1
