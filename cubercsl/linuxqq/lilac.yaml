@@ -3,4 +3,4 @@ maintainers:
 
 update_on:
   - source: cmd
-    cmd:  curl -s https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js | grep -oP '(?<=QQ_)[0-9.]+_[0-9]+(?=_amd64)' | head -n 1
+    cmd:  curl -s -4 https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js | grep -oP '(?<=QQ_)[0-9.]+_[0-9]+(?=_amd64)' | head -n 1
