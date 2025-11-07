@@ -1,7 +1,7 @@
 # Maintainer: so1ar <so1ar114514@gmail.com>
 
 pkgname=v2ray-geoip-custom
-pkgver=202510302213
+pkgver=202511062213
 pkgrel=1
 pkgdesc="Custom GeoIP List for V2Ray"
 arch=('any')
@@ -11,7 +11,7 @@ provides=('v2ray-geoip')
 conflicts=('v2ray-geoip')
 
 source=("geoip-$pkgver.dat::https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$pkgver/geoip.dat")
-sha256sums=('611ce8ff28d9b653c854847289eaec310a1c3add0dd41faaf3cf4ff8e8b9a73e')
+sha256sums=('7aa7ba9f96d3d24048bd44ae9182c72b79737c17fdb15d1a070156147c40cdb5')
 
 package() {
   install -Dm644 geoip-$pkgver.dat "$pkgdir"/usr/share/v2ray/geoip.dat
