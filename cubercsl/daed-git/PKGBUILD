@@ -3,7 +3,7 @@
 pkgname=daed-git
 _pkgname=${pkgname%-git}
 epoch=1
-pkgver=1.8.0.r8.gee01c63
+pkgver=1.8.0.r9.g540b68c
 pkgrel=1
 pkgdesc="A modern dashboard for dae, bundled with dae-wing (backend API server) and dae (core)."
 arch=(x86_64)
