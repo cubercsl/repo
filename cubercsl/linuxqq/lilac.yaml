@@ -3,4 +3,4 @@ maintainers:
 
 update_on:
   - source: cmd
-    cmd:  VER=$(curl -s https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js | grep -oP '(?<=QQ_)[0-9.]+_[0-9]+(?=_amd64)' | head -n 1) && OLDVER=$(grep -oP '(?<=pkgver=).*' linuxqq/PKGBUILD) &&  [ $(vercmp "$VER" "$OLDVER") -lt 0 ] && echo "$OLDVER" || echo "$VER"
+    cmd:  VER=$(curl -4 -s --doh-url https://dns.alidns.com/dns-query https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js | grep -oP '(?<=QQ_)[0-9.]+_[0-9]+(?=_amd64)' | head -n 1) && OLDVER=$(grep -oP '(?<=pkgver=).*' linuxqq/PKGBUILD) &&  [ $(vercmp "$VER" "$OLDVER") -lt 0 ] && echo "$OLDVER" || echo "$VER"
