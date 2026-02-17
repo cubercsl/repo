@@ -3,7 +3,7 @@
 pkgbase=rime-flypy
 pkgname=('rime-flypy' 'fcitx5-flypy')
 pkgver=20251211
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 url="http://flypy.cc/"
 license=('unknown')
