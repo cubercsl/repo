@@ -2,7 +2,7 @@
 
 pkgname=jetbrains-toolbox
 pkgver=3.4.1.78303
-pkgrel=1
+pkgrel=2
 pkgdesc='Manage all your JetBrains Projects and Tools'
 arch=('x86_64' 'i686')
 url='https://www.jetbrains.com/toolbox/'
